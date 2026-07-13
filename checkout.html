@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - Hopper Mart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center;margin-top:30px;">Checkout</h1>
+
+<form style="max-width:500px;margin:30px auto;padding:20px;background:white;border-radius:10px;">
+
+<input type="text" placeholder="আপনার নাম" style="width:100%;padding:12px;margin:10px 0;">
+
+<input type="tel" placeholder="মোবাইল নম্বর" style="width:100%;padding:12px;margin:10px 0;">
+
+<textarea placeholder="সম্পূর্ণ ঠিকানা" style="width:100%;padding:12px;margin:10px 0;height:100px;"></textarea>
+
+<select id="location" style="width:100%;padding:12px;margin:10px 0;">
+<option value="80">Inside Dhaka (৳80)</option>
+<option value="120">Outside Dhaka (৳120)</option>
+</select>
+
+<h3>Delivery Charge: <span id="charge">৳80</span></h3>
+
+<button type="button" onclick="alert('Order Placed Successfully!')" style="width:100%;padding:15px;background:#ff6b00;color:white;border:none;border-radius:8px;">
+Order Now
+</button>
+
+</form>
+
+<script>
+const locationSelect = document.getElementById("location");
+const charge = document.getElementById("charge");
+
+locationSelect.onchange = () => {
+charge.innerHTML = "৳" + locationSelect.value;
+}
+</script>
+
+</body>
+</html>
