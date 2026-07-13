@@ -1,13 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+let count = 0;
 
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(card => {
-    card.style.cursor = "pointer";
-
-    card.addEventListener("click", () => {
-        alert("এই প্রোডাক্টটি খুব শীঘ্রই যোগ করা হবে।");
-    });
-});
-
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    count++;
+    document.getElementById("cart-count").textContent = count;
+  });
 });
